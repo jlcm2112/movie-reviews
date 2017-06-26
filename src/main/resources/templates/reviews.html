@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Lounge Movie Reviews</title>
+	<title>Jamie's Movie Reviews</title>
 	<link rel="stylesheet" type="text/css" href="styles.css"></link>
 </head>
 <body>
@@ -9,13 +9,13 @@
     <h2> Welcome to the movie review page! </h2>
 
 
-<img src="./images/curtain.png" height="600px" width="1400px">
+<img src="/images/curtain.png" height="800px" width="1400px">
  
 
 <a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}">
 <div th:text="${review.title}"></div></a>
-<div id="background"></div> 
-
+<!-- <div id="background"></div> 
+ -->
 
 </body>
 </html>
