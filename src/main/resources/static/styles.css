@@ -34,3 +34,39 @@ p {
 
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  background-image:url("/images/curtain.png");
+  background-repeat: no-repeat;
+  background-position: static;
+  background-size: 100%, 50%;
+  align-items: center;
+  padding-top: 100px;
+}
+body h1 {
+    color: red;
+    font-family: cursive ;
+}
+
+img {
+   padding:1px;
+   border:1px solid #021a40;
+}
+
+body a {
+
+font-size: 50px;
+color: blue;
+font-family: cursive;
+
+}
+
+p {
+	font : black;
+}
+.iframe {
+	align-self: center;
+
+}
+
