@@ -4,9 +4,11 @@ body {
   background-image:url("/images/curtain.png");
   background-repeat: no-repeat;
   background-position: static;
-  background-size: 100%, 50%;
-  align-items: center;
-  padding-top: 100px;
+  background-size: 100%, 100%;
+  align-items: stretch;
+  padding-top: 200px;
+  background-attachment: fixed;
+  
 }
 body h1 {
     color: red;

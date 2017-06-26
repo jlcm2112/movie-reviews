@@ -19,7 +19,7 @@ This is an iframe.
 <!-- <img src="/images/curtain.png" height="800px" width="1400px"></img>
  --> 
 
-<a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}">
+<a th:each="review: ${reviewsAsCollection}" th:href="@{/onereview(id=${review.id})}">
 <div th:text="${review.title}"></div></a>
 </body>
 </html>

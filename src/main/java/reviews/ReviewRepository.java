@@ -19,13 +19,13 @@ public class ReviewRepository {
 		Review review = new Review(55555, " Forest Gump ", 
 				"/images/forestgump.jpg", 
 				" Drama ", 
-				" uuuuu",
-				" xxx ", 
-				" yyyy");
+				" This is a great movie. ",
+				" July 6, 1994 ", 
+				" Slow-witted man inspires many with his life story");
 		reviewMap.put(review.getId(),review);	
-		Review review2 = new Review(67890, " Mad Max ", "/images/madmax.jpg", " Action ", " .....", " xxxxxx "," yyyyyyyyyy");
+		Review review2 = new Review(67890, " Mad Max ", "/images/madmax.jpg", " Action ", " This is a great movie. ", " May 15, 2015 "," Ultra-fast paced feminist action movie");
 		reviewMap.put(review2.getId(),review2);
-		Review review3 = new Review(11121, " My Neighbor Totoro ", "/images/totoro.jpg", " Animation "," ooooo", " wwwwww "," xxxxxxxxxx" );
+		Review review3 = new Review(11121, " My Neighbor Totoro ", "/images/totoro.jpg", " Animation "," This is a great movie. ", " May 7, 1993 "," A wonderful animated film for children" );
 		reviewMap.put(review3.getId(),review3);
 	 
 	}	
