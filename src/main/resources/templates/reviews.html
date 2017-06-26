@@ -2,20 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Jamie's Movie Reviews</title>
-	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
-<h1>The Lounge Movie Reviews</h1>
+<header>
+<h1>Jamie's Movie Reviews</h1>
+</header>
+
     <h2> Welcome to the movie review page! </h2>
+<!-- <div class="iframe">
+<iframe src="onereview.html" scrolling="no">
+This is an iframe.
+</iframe>
+</div> -->
 
-
-<img src="/images/curtain.png" height="800px" width="1400px">
- 
+<!-- <img src="/images/curtain.png" height="800px" width="1400px"></img>
+ --> 
 
 <a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}">
 <div th:text="${review.title}"></div></a>
-<!-- <div id="background"></div> 
- -->
-
 </body>
 </html>

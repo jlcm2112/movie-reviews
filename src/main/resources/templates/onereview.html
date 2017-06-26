@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-
-	<title>One Lounge Review</title>
-	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+	<title>Jamie's Movie Reviews</title>
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 
 </head>
 <body>
-<h1>One Lounge Review</h1>
+<h1 th:text="${onereview.title}"></h1>
 
-<img th:src="${onereview.imageUrl}"/>
-
+<img th:src="${onereview.imageUrl}"></img>
 <p th:text="${onereview.title}"></p>
 <p th:text="${onereview.reviewCategory}"></p>
 <p th:text="${onereview.content}"></p>

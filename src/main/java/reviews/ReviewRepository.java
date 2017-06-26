@@ -25,7 +25,7 @@ public class ReviewRepository {
 		reviewMap.put(review.getId(),review);	
 		Review review2 = new Review(67890, " Mad Max ", "/images/madmax.jpg", " Action ", " .....", " xxxxxx "," yyyyyyyyyy");
 		reviewMap.put(review2.getId(),review2);
-		Review review3 = new Review(11121, " My Neighbor Totoro ", "/images/totoro.jpeg", " Animation "," ooooo", " wwwwww "," xxxxxxxxxx" );
+		Review review3 = new Review(11121, " My Neighbor Totoro ", "/images/totoro.jpg", " Animation "," ooooo", " wwwwww "," xxxxxxxxxx" );
 		reviewMap.put(review3.getId(),review3);
 	 
 	}	
