@@ -1,11 +1,11 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-image:url("/images/curtain.png");
+}
 body h1 {
     color: red;
-     font-family: cursive ;
-}
-
-body {
-	
-    background-color: lightyellow;
+    font-family: cursive ;
 }
 
 img {
@@ -15,11 +15,14 @@ img {
 
 body a {
 
-font-size: 30px;
+font-size: 50px;
 color: blue;
 font-family: cursive;
 
 }
+
 p {
 	font : black;
 }
+
+
