@@ -1,30 +1,56 @@
 package reviews;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+@Entity 
 public class Review {
 	
 	//Instance variables
+	@Id
+	@GeneratedValue
 	private long id;
+	
 	private String title;
 	private String imageUrl;
-	private String reviewCategory;
+	
+	@ManyToOne(optional=false)
+	private Genre genre; //Foreign key 
+	
+	@ManyToMany
+	private Set<Tag> tags;
+	
+
+	@Lob
 	private String content;
 	private String date;
+	
+	@Lob
 	private String synopsis;
 	
 	//Constructor
-	public Review(long id, String title, String imageUrl, 
-			String reviewCategory, String content, String date, 
-			String synopsis){
-	 this.id = id;
+	public Review(Genre genre, String title, String content, String date, 
+			String synopsis, String imageUrl, Tag...tags){
+	 this.genre = genre;
 	 this.title = title;
-	 this.imageUrl = imageUrl;
-	 this.reviewCategory = reviewCategory;
 	 this.content = content;
 	 this.date = date;
 	 this.synopsis = synopsis;
-	 
-	 
+	 this.imageUrl = imageUrl;
+	 this.tags =  new HashSet<>(Arrays.asList(tags));
 	}
+	
+	//No argument constructor required for JPA
+		private Review() {}
+	
 	//Getters
 	public long getId() {
 		return id;
@@ -35,9 +61,6 @@ public class Review {
 	public String getImageUrl() {
 		return imageUrl;
 	}
-	public String getReviewCategory() {
-		return reviewCategory;
-	}
 	public String getContent() {
 		return content;
 	}
@@ -46,5 +69,20 @@ public class Review {
 	}
 	public String getSynopsis() {
 		return synopsis;
+	}
+	public Genre getGenre() {
+		return genre;
+	
+	}
+	public Set<Tag> getTags() {
+		return tags;
+	}
+	
+	
+	public void remove(Tag tag) {
+		tags.remove(tag);
+	}
+	public void add(Tag tag) {
+		tags.add(tag);
 	}
 }

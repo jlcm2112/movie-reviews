@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Single Genre: ' + ${singleGenreModel.title}" />
+</head>
+<body>
+	<h1 th:text="${singleGenreModel.title}" />
+	
+		<h2>Current Reviews in Genre</h2>
+		<ul>
+			<li th:each="currentReview: ${singleGenreModel.reviews}"><a
+				th:text="${currentReview.title}"
+				th:href="@{/onereview(id=${currentReview.id})}" />
+				</li>
+		</ul>
+	
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>All Categories</title>
+</head>
+<body>
+	<h1>Genres</h1>
+	
+	<ul>
+		<li th:each="genre: ${allGenresModel}"><a th:href="@{/genre(id=${genre.id})}" th:text="${genre.title}" /></li>
+	</ul>
+</body>
+</html>
