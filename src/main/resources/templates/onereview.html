@@ -17,14 +17,13 @@
 <h1 th:text="${onereview.title}"></h1>
 
 <img th:src="${onereview.imageUrl}" height="400px" width="800px"></img>
-<p th:text="${onereview.title}"></p>
-<p th:text="${onereview.genre.title}"></p>
+<p>Genre:<span th:text="${onereview.genre.title}"/></p>
 <p th:text="${onereview.content}"></p>
-<p th:text="${onereview.date}"></p>
-<p th:text="${onereview.synopsis}"></p>
- <a class = "backtomain" href="/home">Back to The Movie Lounge</a>
+<p>Release Date:<span th:text="${onereview.date}"/></p>
+<p>Synopsis:<spqan th:text="${onereview.synopsis}"/></p>
+ 
 <h1>Tags</h1>
-
+<div class="tags">
 	<form>
 		<input name="reviewId" type="hidden" th:value="${onereview.id}" />
 		<ul>
@@ -41,9 +40,9 @@
 		<br/>
 		<button th:formaction="@{/createTag}">Create Tag</button>	
 		</form>	
+	</div>
 	
-	
-	
+	<p><a class = "backtomain" href="/home">Back to The Movie Lounge</a></p>
 	</div>
 	
 </body>

@@ -33,7 +33,12 @@ font-family: cursive;
 }
 
 .main_content {
-  padding-top: 200px;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 50%;
 }
 
 
@@ -80,6 +85,7 @@ nav {
 }
 p {
   font : black;
+
 }
 .iframe {
   align-self: center;
@@ -134,4 +140,8 @@ footer {
    background-color: #101010;
   text-align: right;
   color: white;
+}
+.tag {
+	  font : black;
+  border: solid 3px grey;
 }
