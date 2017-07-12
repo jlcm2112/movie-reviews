@@ -20,7 +20,8 @@
 </header>
 	<h2>Tags</h2>
 <ul>
-			<li th:each="current: ${tags}"><a
+			
+			<li th:each="current: ${tags}"><a class="tags"
 				th:href="@{/tag(id=${current.id})}"> <span th:text="${current.name}" /></a>
 				</li>
 				

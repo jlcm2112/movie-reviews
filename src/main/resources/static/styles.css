@@ -153,6 +153,12 @@ footer {
 	  font-color: black;
   border: solid 3px grey;	
   	font-size: 30px;
+  	margin: 5px;
+ 	display: inline-block;
+	margin: 0 .3em .3em 0;
+	padding: 0;
+  	  
+  	
   
 }
 ul li {
