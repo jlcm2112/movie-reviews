@@ -16,12 +16,13 @@
   
 <h1 th:text="${onereview.title}"></h1>
 
-<img th:src="${onereview.imageUrl}" height="400px" width="800px"></img>
+<img th:src="${onereview.imageUrl}" height="400px" width="800px" ></img>
+<div class="movieinfo">
 <p>Genre: <span th:text="${onereview.genre.title}"/></p>
 <p th:text="${onereview.content}"></p>
 <p>Release Date: <span th:text="${onereview.date}"/></p>
 <p>Synopsis: <spqan th:text="${onereview.synopsis}"/></p>
- 
+ </div>
 <h2>Tags</h2>
 
 	<form>

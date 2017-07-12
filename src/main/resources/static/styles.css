@@ -24,7 +24,7 @@ body h1 {
 
 img {
    padding:1px;
-   border:1px solid #021a40;
+   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 body a {
@@ -122,8 +122,7 @@ body h2 {
 
 
 img {
-   padding:1px;
-   border:1px solid #021a40;
+  
 }
 
 body a {
@@ -162,8 +161,11 @@ footer {
   	font-size: 30px;
   
 }
-
-
 ul li {
 	list-style-type: none;
+}
+.movieinfo {
+	   margin-top : 50px;
+   border:1px solid #021a40;
+   padding: 10px;
 }
