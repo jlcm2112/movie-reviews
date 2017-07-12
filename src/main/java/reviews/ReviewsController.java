@@ -32,8 +32,9 @@ public class ReviewsController {
 		model.addAttribute("singleGenreModel", genreRepo.findOne(id));
 		return "genre";
 	}
-		
-	@RequestMapping("/reviews")
+
+	
+	@RequestMapping("/home")
 	public String fetchReviews(Model model) {
 		model.addAttribute("reviewsAsCollection", reviewRepo.findAll());
 		return "reviews";
@@ -50,6 +51,13 @@ public class ReviewsController {
 	
 	@RequestMapping("/tags")
 	public String showTags(@RequestParam(value="id") Long id, Model model) {
+		model.addAttribute("tags", tagRepo.findAll());
+		return "tags";
+		
+	}
+	
+	@RequestMapping("/alltags")
+	public String showAllTags(Model model) {
 		model.addAttribute("tags", tagRepo.findAll());
 		return "tags";
 		

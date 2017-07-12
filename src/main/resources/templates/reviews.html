@@ -5,21 +5,23 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+  <div class="main_content">
 <header>
 <h1>Jamie's Movie Reviews</h1>
 </header>
 
     <h2> Welcome to the movie review page! </h2>
-<!-- <div class="iframe">
-<iframe src="onereview.html" scrolling="no">
-This is an iframe.
-</iframe>
-</div> -->
 
-<!-- <img src="/images/curtain.png" height="800px" width="1400px"></img>
- --> 
 
 <a th:each="review: ${reviewsAsCollection}" th:href="@{/onereview(id=${review.id})}">
 <div th:text="${review.title}"></div></a>
+</div>
 </body>
 </html>

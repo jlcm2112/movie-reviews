@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 <head>
 <title th:text="'Single Genre: ' + ${singleGenreModel.title}" />
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+    <div class="main_content">
+  
 	<h1 th:text="${singleGenreModel.title}" />
 	
 		<h2>Current Reviews in Genre</h2>
@@ -13,6 +23,6 @@
 				th:href="@{/onereview(id=${currentReview.id})}" />
 				</li>
 		</ul>
-	
+	</div>
 </body>
 </html>

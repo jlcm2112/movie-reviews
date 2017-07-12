@@ -5,6 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"></link>
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+    <div class="main_content">
+  
 <h1 th:text="${onereview.title}"></h1>
 
 <img th:src="${onereview.imageUrl}" height="400px" width="800px"></img>
@@ -13,7 +22,7 @@
 <p th:text="${onereview.content}"></p>
 <p th:text="${onereview.date}"></p>
 <p th:text="${onereview.synopsis}"></p>
- <a class = "backtomain" th:href="@{/reviews(title=${reviewAsCollection})}">Back to The Movie Lounge</a>
+ <a class = "backtomain" href="/home">Back to The Movie Lounge</a>
 <h1>Tags</h1>
 
 	<form>
@@ -33,12 +42,10 @@
 		<button th:formaction="@{/createTag}">Create Tag</button>	
 		</form>	
 	
-	<div class="JQCloud">
+	
 	
 	</div>
-
+	
 </body>
-<script src="bower_components/jqcloud2/dist/jqcloud.min.js"></script>
 
-<link rel="stylesheet" href="bower_components/jqcloud2/dist/jqcloud.min.css">
 </html>

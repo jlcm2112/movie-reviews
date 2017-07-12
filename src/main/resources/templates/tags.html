@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+
 <head>
 <title>Tags</title>
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+    <div class="main_content">
+  
 	<h1>Tags</h1>
+<ul>
+			<li class="tag-tag" th:each="tag: ${tags}"><a
+				th:href="@{/tag(id=${tag.id})}"> <span th:text="${tag.name}" />
+			</a></li>
+		</ul>
 
-
-
+</div>
 </body>
 </html>

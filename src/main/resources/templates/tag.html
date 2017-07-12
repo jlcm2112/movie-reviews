@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 <head>
 <title>Tag</title>
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+    <div class="main_content">
+  
 	<a class = "backtomain" th:href="@{/genres(title=${movies})}">Back to Home</a>
 
 	<h1>Jamie's Movies Reviews</h1>
@@ -13,6 +23,6 @@
 	<ol type="1">
 		<li th:each="currentReview: ${tag.reviewsWithTag}"><a th:href="@{/reviews(id=${currentReview.id})}" th:text="${currentReview.title}" /></li>
 	</ol>
-
+</div>
 </body>
 </html>

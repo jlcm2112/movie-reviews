@@ -6,18 +6,14 @@ body {
   background-position: static;
   background-size: 100%, 100%;
   align-items: stretch;
-  padding-top: 200px;
+  padding-top: 400px;
   background-attachment: fixed;
   
 }
 
-.JQCloud {
-	width: 500px;
-	height: 500px;
-	
-	
-}
 
+header {
+}
 body h1 {
     color: red;
     font-family: cursive ;
@@ -36,11 +32,57 @@ font-family: cursive;
 
 }
 
+.main_content {
+  padding-top: 200px;
+}
+
+
+nav {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+nav ul {
+    list-style-type: none;
+    margin-top: -10px;
+    overflow: hidden;
+    background-color: #333;
+}
+nav li {
+    float: left;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+}
+nav li a {
+display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    
+}
+
+nav li a:hover {
+    background-color: #111;
+    padding-bottom: 16px;
+}
+
+nav {
+    margin: auto;
+    padding-top: -500px;
+    text-align: center;
+
+}
 p {
-	font : black;
+  font : black;
 }
 .iframe {
-	align-self: center;
+  align-self: center;
 
 }
 
@@ -52,7 +94,7 @@ body {
   background-position: static;
   background-size: 100%, 50%;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 0;
 }
 body h1 {
     color: red;
@@ -73,10 +115,23 @@ font-family: cursive;
 }
 
 p {
-	font : black;
+  font : black;
 }
 .iframe {
-	align-self: center;
+  align-self: center;
 
 }
+.backtomain {
+	font-size: 25px;
+}
 
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 16px;
+   background-color: #101010;
+  text-align: right;
+  color: white;
+}

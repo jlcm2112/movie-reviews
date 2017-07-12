@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+
 <head>
 <title>All Categories</title>
 </head>
 <body>
+<nav>
+  <ul>
+  <li><a class="active" href="/home">Home</a></li>
+  <li><a href="/genres">Genres</a></li>
+  <li><a href="/alltags">Tags</a></li>
+</ul>
+  </nav>
+    <div class="main_content">
+  
 	<h1>Genres</h1>
 	
 	<ul>
 		<li th:each="genre: ${allGenresModel}"><a th:href="@{/genre(id=${genre.id})}" th:text="${genre.title}" /></li>
 	</ul>
+	</div>
 </body>
 </html>

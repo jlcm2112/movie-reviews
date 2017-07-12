@@ -30,9 +30,9 @@ public class ReviewPopulator implements CommandLineRunner {
 		Genre romance = new Genre("romance");
 		genreRepo.save(action);
 		genreRepo.save(romance);
-		Review review1 = new Review (action, "Superman", "This is a good movie", "March 10, 2015", "Synopsis", "no_image.jpg", romantic);
+		Review review1 = new Review (action, "Superman", "This is a good movie", "March 10, 2015", "Synopsis", "/images/superman.jpg", romantic);
 		reviewRepo.save(review1);
-		Review review2 = new Review (action, "Batman", "This is a good movie", "March 10, 2015", "Synopsis", "no_image.jpg", romantic);
+		Review review2 = new Review (action, "Batman", "This is a good movie", "March 10, 2015", "Synopsis", "/images/batman.jpg", romantic);
 		reviewRepo.save(review2);
 
 
