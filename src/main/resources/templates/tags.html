@@ -18,7 +18,7 @@
   <header>
 <h1>Jamie's Movie Reviews</h1>
 </header>
-	<h1>Tags</h1>
+	<h2>Tags</h2>
 <ul>
 			<li th:each="current: ${tags}"><a
 				th:href="@{/tag(id=${current.id})}"> <span th:text="${current.name}" /></a>

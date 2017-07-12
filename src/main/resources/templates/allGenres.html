@@ -17,7 +17,7 @@
   <header>
 <h1>Jamie's Movie Reviews</h1>
 </header>
-	<h1>Genres</h1>
+	<h2>Genres</h2>
 	
 	<ul>
 		<li th:each="genre: ${allGenresModel}"><a th:href="@{/genre(id=${genre.id})}" th:text="${genre.title}" /></li>
