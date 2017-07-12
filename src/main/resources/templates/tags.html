@@ -3,7 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 
 <head>
-<title>Tags</title>
+	<title>Jamie's Movie Reviews</title>
 </head>
 <body>
 <nav>
@@ -13,13 +13,17 @@
   <li><a href="/alltags">Tags</a></li>
 </ul>
   </nav>
-    <div class="main_content">
   
+    <div class="main_content">
+  <header>
+<h1>Jamie's Movie Reviews</h1>
+</header>
 	<h1>Tags</h1>
 <ul>
-			<li class="tag-tag" th:each="tag: ${tags}"><a
-				th:href="@{/tag(id=${tag.id})}"> <span th:text="${tag.name}" />
-			</a></li>
+			<li th:each="current: ${tags}"><a
+				th:href="@{/tag(id=${current.id})}"> <span th:text="${current.name}" /></a>
+				</li>
+				
 		</ul>
 
 </div>

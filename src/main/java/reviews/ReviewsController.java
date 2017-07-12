@@ -49,12 +49,6 @@ public class ReviewsController {
          return "onereview";
      }
 	
-	@RequestMapping("/tags")
-	public String showTags(@RequestParam(value="id") Long id, Model model) {
-		model.addAttribute("tags", tagRepo.findAll());
-		return "tags";
-		
-	}
 	
 	@RequestMapping("/alltags")
 	public String showAllTags(Model model) {
@@ -70,8 +64,17 @@ public class ReviewsController {
 		return "tag";
 	}
 	
+	@RequestMapping("onereview/tags/delete")
+	public String deleteOneTag(@RequestParam long tagId, @RequestParam long reviewId) {
+		Tag toDelete = tagRepo.findOne(tagId);
+		Review review = reviewRepo.findOne(reviewId);
+		review.remove(toDelete);
+		reviewRepo.save(review);
+		return "redirect:/onereview?id=" + reviewId;
+	}
+	
 	@RequestMapping("/tags/delete")
-	public String deleteTag(@RequestParam long tagId, @RequestParam long reviewId) {
+	public String deleteTag(@RequestParam long tagId) {
 		Tag toDelete = tagRepo.findOne(tagId);
  		for(Review review: toDelete.getReviewsWithTag()) {
  			review.remove(toDelete);
@@ -79,7 +82,7 @@ public class ReviewsController {
  		}
 		
 		tagRepo.delete(toDelete);
-		return "redirect:/onereview?id=" + reviewId;
+		return "redirect:/alltags";
 	}
 	
 		

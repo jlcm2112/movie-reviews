@@ -27,13 +27,6 @@ img {
    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-body a {
-
-font-size: 50px;
-color: blue;
-font-family: cursive;
-
-}
 
 .main_content {
   padding-top: 150px;
@@ -129,7 +122,8 @@ body a {
 
 font-size: 50px;
 color: blue;
-font-family: cursive;
+	font-family: 'Jockey One', sans-serif;
+
 
 }
 

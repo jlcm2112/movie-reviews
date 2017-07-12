@@ -13,7 +13,9 @@
 </ul>
   </nav>
     <div class="main_content">
-  
+  <header>
+<h1>Jamie's Movie Reviews</h1>
+</header>
 <h1 th:text="${onereview.title}"></h1>
 
 <img th:src="${onereview.imageUrl}" height="400px" width="800px" ></img>
@@ -29,7 +31,7 @@
 		<input name="reviewId" type="hidden" th:value="${onereview.id}" />
 		<ul>
 			<li th:each="tag: ${onereview.tags}"><a class="tags" th:href="@{/tag(id=${tag.id})}"><span th:text="${tag.name}" /></a>	
-			<button name="tagId" th:value="${tag.id}" th:formaction="@{/tags/delete}">delete</button></li>
+			<button name="tagId" th:value="${tag.id}" th:formaction="@{onereview/tags/delete}">delete</button></li>
 		</ul>
 	</form>
 		</div>
