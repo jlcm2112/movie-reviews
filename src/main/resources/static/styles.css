@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Jockey+One');
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,7 @@ body {
 header {
 }
 body h1 {
+	font-family: 'Jockey One', sans-serif;
     color: red;
     font-family: cursive ;
 }
@@ -38,11 +41,12 @@ font-family: cursive;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-width: 50%;
+  max-width: 800px;
 }
 
 
 nav {
+	font-family: 'Jockey One', sans-serif;
     text-align: center;
     width: 100%;
     position: fixed;
@@ -93,6 +97,7 @@ p {
 }
 
 body {
+	
   display: flex;
   flex-direction: column;
   background-image:url("/images/curtain.png");
@@ -105,7 +110,16 @@ body {
 body h1 {
     color: red;
     font-family: cursive ;
+    	font-family: 'Jockey One', sans-serif;
+    font-size: 70px;
 }
+body h2 {
+    color: red;
+    font-family: cursive ;
+    	font-family: 'Jockey One', sans-serif;
+    font-size: 50px;
+}
+
 
 img {
    padding:1px;
@@ -141,7 +155,15 @@ footer {
   text-align: right;
   color: white;
 }
-.tag {
-	  font : black;
-  border: solid 3px grey;
+.tags {
+	background-color: lightblue;
+	  font-color: black;
+  border: solid 3px grey;	
+  	font-size: 30px;
+  
+}
+
+
+ul li {
+	list-style-type: none;
 }

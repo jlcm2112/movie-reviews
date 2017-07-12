@@ -14,14 +14,14 @@
   </nav>
     <div class="main_content">
   
-	<a class = "backtomain" th:href="@{/genres(title=${movies})}">Back to Home</a>
 
 	<h1>Jamie's Movies Reviews</h1>
 
-	<h2>List of Movies for Tag </h2>
+	<h2>List of Movies for Tag "
+	<span th:text="${tag.name}"/>" </h2>
 	
 	<ol type="1">
-		<li th:each="currentReview: ${tag.reviewsWithTag}"><a th:href="@{/reviews(id=${currentReview.id})}" th:text="${currentReview.title}" /></li>
+		<li th:each="currentReview: ${tag.reviewsWithTag}"><a th:href="@{/onereview(id=${currentReview.id})}" th:text="${currentReview.title}" /></li>
 	</ol>
 </div>
 </body>

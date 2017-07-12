@@ -17,33 +17,33 @@
 <h1 th:text="${onereview.title}"></h1>
 
 <img th:src="${onereview.imageUrl}" height="400px" width="800px"></img>
-<p>Genre:<span th:text="${onereview.genre.title}"/></p>
+<p>Genre: <span th:text="${onereview.genre.title}"/></p>
 <p th:text="${onereview.content}"></p>
-<p>Release Date:<span th:text="${onereview.date}"/></p>
-<p>Synopsis:<spqan th:text="${onereview.synopsis}"/></p>
+<p>Release Date: <span th:text="${onereview.date}"/></p>
+<p>Synopsis: <spqan th:text="${onereview.synopsis}"/></p>
  
-<h1>Tags</h1>
-<div class="tags">
+<h2>Tags</h2>
+
 	<form>
 		<input name="reviewId" type="hidden" th:value="${onereview.id}" />
 		<ul>
-			<li th:each="tag: ${onereview.tags}"><a th:href="@{/tag(id=${tag.id})}"><span th:text="${tag.name}" /></a>	
+			<li th:each="tag: ${onereview.tags}"><a class="tags" th:href="@{/tag(id=${tag.id})}"><span th:text="${tag.name}" /></a>	
 			<button name="tagId" th:value="${tag.id}" th:formaction="@{/tags/delete}">delete</button></li>
 		</ul>
 	</form>
+		</div>
 	
-	
-	<form method="POST">
+	<p><form method="POST">
 			<input name="id" type="hidden" th:value="${onereview.id}" />
 	
 		<label>Add Tag: <input type="text" name="name" /></label>
 		<br/>
 		<button th:formaction="@{/createTag}">Create Tag</button>	
 		</form>	
-	</div>
+</p>
 	
 	<p><a class = "backtomain" href="/home">Back to The Movie Lounge</a></p>
-	</div>
+	
 	
 </body>
 
